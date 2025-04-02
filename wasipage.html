@@ -19,12 +19,23 @@
       overflow: hidden;
     }
 
+    .video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      object-fit: cover;
+      opacity: 0.7;
+    }
+
     .btn {
       --color: #007bff;
       --color2: rgb(10, 25, 30);
       width: 200px;
       padding: 0.8em 1.75em;
-      background-color: transparent;
+      background-color: rgba(0, 0, 0, 0.5);
       border-radius: 6px;
       border: .3px solid var(--color);
       transition: .5s;
@@ -36,6 +47,8 @@
       color: var(--color);
       margin-bottom: 10px;
       position: relative;
+      backdrop-filter: blur(5px);
+      z-index: 1;
     }
 
     .btn::after, .btn::before {
@@ -48,6 +61,7 @@
       inset: 50%;
       transition: .5s ease-out;
       background-color: var(--color);
+      z-index: -1;
     }
 
     .btn:hover::before {
@@ -75,6 +89,7 @@
       border-radius: 50%;
       opacity: 0.5;
       animation: particleMove 4s linear infinite;
+      z-index: 0;
     }
 
     .particle:nth-child(2n) {
@@ -115,6 +130,8 @@
       letter-spacing: 1.5px;
       opacity: 0.9;
       filter: blur(0.8px);
+      z-index: 1;
+      text-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
     }
 
     @keyframes slideIn {
@@ -140,22 +157,18 @@
   </style>
 </head>
 <body>
-    <button onclick="window.open('/frediqr')" class="btn">
-    <i class="fas fa-qr"></i>Scan-QR-Code</button>
+  <video class="video-background" autoplay muted loop>
+    <source src="https://files.catbox.moe/swxcic.mp4" type="video/mp4">
+  </video>
+  
   <button onclick="window.open('/pair')" class="btn">
     <i class="fas fa-code"></i>Get-Session</button>
-  <button onclick="window.open('https://sociabuzz.com/NjabuloJ')" class="btn">
-    <i class="fas fa-coffee"></i> Buy-Me-Coffee</button>
-  <button onclick="window.open('https://www.youtube.com/@NjabuloJb')" class="btn">
-    <i class="fas fa-youtube"></i> YouTube</button>
-      <button onclick="window.open('https://wa.me/26777821911?text=')" class="btn">
+  <button onclick="window.open('https://whatsapp.com/channel/0029Vad7YNyJuyA77CtIPX0x')" class="btn">
+    <i class="fas fa-youtube"></i>Whatsapp Channel</button>
+  <button onclick="window.open('https://wa.me/254785392165?text=')" class="btn">
     <i class="fas fa-whatsapp"></i>Dev-Number</button>
-  <button onclick="window.open('https://whatsapp.com/channel/0029VarYP5iAInPtfQ8fRb2T')" class="btn">
-    <i class="fab fa-whatsapp"></i> Wa-Channel</button>
-  <button onclick="window.open('fredi-bio.vercel.app')" class="btn">
-    <i class="fas fa-web"></i>Owner-Web</button>
     
-  <div class="text-animation">WELCOME TO NJABULO JB WEB OFFICE</div>
+  <div class="text-animation">How May I Help You Today!</div>
 
   <!-- Particles -->
   <script>
@@ -168,4 +181,4 @@
     }
   </script>
 </body>
-  </html>
+</html>
