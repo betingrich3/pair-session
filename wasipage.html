@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" type="x-icon" href="https://files.catbox.moe/ipy7l3.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: 'Roboto', 'Segoe UI', sans-serif;
+      overflow: hidden;
+    }
+
+    .btn {
+      --color: #007bff;
+      --color2: rgb(10, 25, 30);
+      width: 200px;
+      padding: 0.8em 1.75em;
+      background-color: transparent;
+      border-radius: 6px;
+      border: .3px solid var(--color);
+      transition: .5s;
+      overflow: hidden;
+      cursor: pointer;
+      font-weight: 300;
+      font-size: 17px;
+      text-transform: uppercase;
+      color: var(--color);
+      margin-bottom: 10px;
+      position: relative;
+    }
+
+    .btn::after, .btn::before {
+      content: '';
+      display: block;
+      height: 100%;
+      width: 100%;
+      transform: skew(90deg) translate(-50%, -50%);
+      position: absolute;
+      inset: 50%;
+      transition: .5s ease-out;
+      background-color: var(--color);
+    }
+
+    .btn:hover::before {
+      transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+    }
+
+    .btn:hover::after {
+      transform: skew(45deg) translate(-50%, -50%);
+    }
+
+    .btn:hover {
+      color: var(--color2);
+    }
+
+    .btn:active {
+      filter: brightness(.7);
+      transform: scale(.98);
+    }
+
+    .particle {
+      position: absolute;
+      background-color: rgba(0, 123, 255, 0.8);
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      opacity: 0.5;
+      animation: particleMove 4s linear infinite;
+    }
+
+    .particle:nth-child(2n) {
+      animation-duration: 5s;
+    }
+
+    .particle:nth-child(3n) {
+      animation-duration: 6s;
+    }
+
+    @keyframes particleMove {
+      0% {
+        transform: translateY(0) translateX(0) scale(1);
+      }
+      50% {
+        transform: translateY(-100px) translateX(100px) scale(1.5);
+        opacity: 0.7;
+      }
+      100% {
+        transform: translateY(200px) translateX(-100px) scale(0.5);
+        opacity: 0;
+      }
+    }
+
+    .text-animation {
+      position: absolute;
+      top: -50px;
+      left: 50%;
+      transform: translateX(-50%) scale(0.9);
+      animation: slideIn 2s ease-out forwards, glow 1s ease-in-out infinite alternate;
+      font-size: 24px;
+      font-weight: 500;
+      text-align: center;
+      background: linear-gradient(45deg, #007bff, #0056b3);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      letter-spacing: 1.5px;
+      opacity: 0.9;
+      filter: blur(0.8px);
+    }
+
+    @keyframes slideIn {
+      0% {
+        top: -50px;
+        opacity: 0;
+      }
+      100% {
+        top: 20px;
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+      }
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #007bff, 0 0 20px #007bff, 0 0 30px #0056b3;
+      }
+      to {
+        text-shadow: 0 0 20px #0056b3, 0 0 30px #0056b3, 0 0 40px #003f7f;
+      }
+    }
+  </style>
+</head>
+<body>
+    <button onclick="window.open('/frediqr')" class="btn">
+    <i class="fas fa-qr"></i>Scan-QR-Code</button>
+  <button onclick="window.open('/pair')" class="btn">
+    <i class="fas fa-code"></i>Get-Session</button>
+  <button onclick="window.open('https://sociabuzz.com/NjabuloJ')" class="btn">
+    <i class="fas fa-coffee"></i> Buy-Me-Coffee</button>
+  <button onclick="window.open('https://www.youtube.com/@NjabuloJb')" class="btn">
+    <i class="fas fa-youtube"></i> YouTube</button>
+      <button onclick="window.open('https://wa.me/26777821911?text=')" class="btn">
+    <i class="fas fa-whatsapp"></i>Dev-Number</button>
+  <button onclick="window.open('https://whatsapp.com/channel/0029VarYP5iAInPtfQ8fRb2T')" class="btn">
+    <i class="fab fa-whatsapp"></i> Wa-Channel</button>
+  <button onclick="window.open('fredi-bio.vercel.app')" class="btn">
+    <i class="fas fa-web"></i>Owner-Web</button>
+    
+  <div class="text-animation">WELCOME TO NJABULO JB WEB OFFICE</div>
+
+  <!-- Particles -->
+  <script>
+    for (let i = 0; i < 20; i++) {
+      const particle = document.createElement('div');
+      particle.classList.add('particle');
+      particle.style.left = `${Math.random() * 100}vw`;
+      particle.style.top = `${Math.random() * 100}vh`;
+      document.body.appendChild(particle);
+    }
+  </script>
+</body>
+  </html>
