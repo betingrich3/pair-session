@@ -57,18 +57,17 @@ router.get('/', async (req, res) => {
                let session = await Pair_Code_By_Gifted_Tech.sendMessage(Pair_Code_By_Gifted_Tech.user.id, { text: '' + b64data });
 
                let GIFTED_MD_TEXT = `
-*✧ɴᴊᴀʙᴜʟᴏ ᴊʙ ᴅᴇᴠɪᴄᴇ sᴜᴄᴄᴇssғᴜʟ ᴄᴏɴɴᴇᴄᴛᴇᴅ✧*
-*================================*
-
-𝗖𝗥𝗘𝗔𝗧𝗘 𝗕𝗬 𝗡𝗝𝗔𝗕𝗨𝗟𝗢 𝗝𝗕
-*================================*
-
-𝗪𝗛𝗔𝗧𝗦𝗔𝗣𝗣 𝗟𝗜𝗡𝗞𝗦 : https://shorturl.at/q8ZuS
-*================================*
-
-𝗖𝗢𝗡𝗧𝗔𝗖𝗧 𝗢𝗪𝗡𝗘𝗥 : https://wa.me/message/5YM57LOXVA4BC1
-*================================*
-
+╭━━━〔 *Queen-M* 〕━━━┈⊷
+┃★╭──────────────
+┃★│ *rescription : session id*
+┃★│ *Use* : *To deploy bot*
+┃★│ *Usage;share to deployer*
+┃★│ *Version : 1.0*
+┃★│ *Owner : PkDriller*
+┃★╰──────────────
+╰━━━━━━━━━━━━━━━┈⊷
+*Follow us today*
+*https://whatsapp.com/channel/0029Vad7YNyJuyA77CtIPX0x*
 _Don't Forget To Give Star To My Repo_`
  await Pair_Code_By_Gifted_Tech.sendMessage(Pair_Code_By_Gifted_Tech.user.id,{text:GIFTED_MD_TEXT},{quoted:session})
  
